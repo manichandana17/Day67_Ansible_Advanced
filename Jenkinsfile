@@ -1,22 +1,20 @@
-pipeline {
+ pipeline {
     agent any
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/Day67_Ansible_Advanced.git'
+                git 'https://github.com/manichandana17/Day67_Ansible_Advanced.git'
             }
         }
 
-        stage('Deploy') {
+        stage('Verify Files') {
             steps {
-                sh '''
-                ansible-playbook \
-                -i inventory \
-                site.yml
-                '''
+                bat 'dir'
             }
         }
     }
 }
+
+
